@@ -1,15 +1,17 @@
 import json
 
-jsonfile = open('iris.json','r')
-jsondata =  jsonfile.readlines()
+def listelements(jsonpath):
+  file = open(jsonpath,'r')
+  jsonlist =  file.readlines()
+  file.close()
+  return jsonlist  
+def dictionary_obj(jasonpath):
+  file = open(jsonpath, 'r')
+      
 
-json_list = []
 
-for line in jsondata:
-    json_obj = json.loads(jsondata)
-    json_list.append(json_obj)
-
+jsonpath = 'iris.json'
+json_list = listelements(jsonpath)
+print("innapidicho : ")
 for line in json_list:
-    print(line)
-
-
+  print(line)
