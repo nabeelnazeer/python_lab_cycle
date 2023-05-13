@@ -1,7 +1,9 @@
 
-import random
 
+import random
+#creating a class called box
 class Box:
+  #constructor that checks for the number of arguments been given
   def __init__(b,*arg):
     if len(arg) == 1:
       b.Length_ = arg[0]
@@ -16,10 +18,12 @@ class Box:
       b.Breadth_ = arg[1]
       b.Height_ = arg[2]
   def area(b):
+    #return area of the prism
     b.Area_ = b.Length_*b.Breadth_
     return b.Area_
 
   def volume(b):
+    #returns volume of the prism
     b.Volume_ = b.Length_*b.Breadth_*b.Height_
     return b.Volume_
   
@@ -32,6 +36,7 @@ class Box:
 ratio = []
 
 cubeDimension = []
+#randomnly assigns a single variable as dimension of cube
 cubeDimension.append(random.randint(1,1000))
 print("Cube Prism\nDimension" , end = " ")
 print(cubeDimension)
@@ -45,6 +50,7 @@ cubePrism.volumeDisplay()
 ratio.append((VolumeC/AreaC))
 
 squareDimension = []
+#dimensions of a square prism which loop 2 times
 for i in range(2):
   squareDimension.append(random.randint(1,1000))
 print("Square Prism\nDimension" , end = " ")
@@ -59,6 +65,7 @@ squarePrism.volumeDisplay()
 ratio.append((VolumeS/AreaS))
 
 recatangleDimension = []
+#dimensions of a rect prism which loops three times
 for i in range(3):
   recatangleDimension.append(random.randint(1,1000))
 
